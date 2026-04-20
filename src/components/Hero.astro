@@ -1,68 +1,104 @@
 ---
-const personalImageAlt = "Miguel Ángel"
-import Badge from "@/components/Badge.astro"
-import GitHubIcon from "@/components/icons/GitHub.astro"
-import LinkedInIcon from "@/components/icons/LinkedIn.astro"
-import MailIcon from "@/components/icons/Mail.astro"
-import SparklesIcon from "@/components/icons/Sparkles.astro"
-import SocialPill from "@/components/SocialPill.astro"
+import { site } from "@/content/site";
+import Badge from "@/components/Badge.astro";
+import GitHubIcon from "@/components/icons/GitHub.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SparklesIcon from "@/components/icons/Sparkles.astro";
+import SocialPill from "@/components/SocialPill.astro";
+
+const { person, links, availability } = site;
 ---
 
-<div class="max-w-xl">
-  <div class="anim-fade-in flex gap-4 mb-6 items-center">
-    <!-- Avatar with ambient glow -->
-    <div class="relative flex-shrink-0">
+<div class="max-w-xl min-w-0">
+  <div
+    class="anim-fade-in mb-6 flex flex-col items-start gap-4 min-[400px]:flex-row min-[400px]:items-center"
+  >
+    <div class="relative shrink-0">
       <div
-        class="absolute inset-0 rounded-full bg-yellow-400/30 dark:bg-yellow-400/20 blur-xl scale-125"
+        class="absolute inset-0 scale-125 rounded-full bg-yellow-400/30 blur-xl dark:bg-yellow-400/20"
         aria-hidden="true"
       >
       </div>
       <img
-        class="relative rounded-full shadow-2xl size-20 ring-2 ring-yellow-400/60 ring-offset-2 ring-offset-gray-50 dark:ring-offset-gray-950"
-        src="/midudev.webp"
-        alt={personalImageAlt}
+        class="relative size-20 rounded-full shadow-2xl ring-2 ring-yellow-400/60 ring-offset-2 ring-offset-gray-50 dark:ring-offset-gray-950"
+        src={person.avatarSrc}
+        width={80}
+        height={80}
+        alt={person.avatarAlt}
+        fetchpriority="high"
       />
     </div>
-    <a
-      href="https://linkedin.com/in/midudev"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
-    >
-      <Badge><SparklesIcon class="size-3" /> Disponible para trabajar</Badge>
-    </a>
+    {
+      availability.show && (
+        <a
+          href={availability.badgeHref}
+          target={
+            availability.badgeHref.startsWith("http") ? "_blank" : undefined
+          }
+          rel={
+            availability.badgeHref.startsWith("http")
+              ? "noopener noreferrer"
+              : undefined
+          }
+          class="flex min-h-11 max-w-full min-w-0 items-center transition min-[400px]:justify-start md:hover:scale-105"
+        >
+          <Badge>
+            <SparklesIcon class="size-3 shrink-0" aria-hidden="true" />
+            {availability.label}
+          </Badge>
+        </a>
+      )
+    }
   </div>
 
   <h1
-    class="anim-fade-in anim-delay-1 text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+    class="anim-fade-in anim-delay-1 break-words text-3xl font-bold tracking-tight text-gray-800 min-[400px]:text-4xl sm:text-5xl dark:text-white"
   >
-    Hey, soy <span class="gradient-name">midudev</span>
+    {person.greeting}{" "}
+    <span class="gradient-name">{person.displayName}</span>
   </h1>
 
   <p
-    class="anim-fade-in anim-delay-2 mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+    class="anim-fade-in anim-delay-1 mt-3 text-lg font-medium text-gray-600 dark:text-gray-400"
   >
-    +15 años de experiencia. <strong
-      >Ingeniero de Software y Creador de Contenido sobre Programación</strong
-    > de Barcelona, España 🇪🇸. Especializado en el desarrollo de aplicaciones web
-    únicas.
+    {person.headline}
+  </p>
+
+  <p
+    class="anim-fade-in anim-delay-2 mt-6 text-base leading-relaxed text-gray-800 min-[400px]:text-lg sm:text-xl dark:[&>strong]:text-[#fcd34d] [&>strong]:font-semibold [&>strong]:text-yellow-500 dark:text-gray-300"
+  >
+    <strong>{person.roleHighlight}</strong>
+    {" — "}
+    {person.bioRest}
   </p>
 
   <nav
-    class="anim-fade-in anim-delay-3 flex flex-wrap gap-4 mt-8"
+    class="anim-fade-in anim-delay-3 mt-8 flex flex-wrap gap-3"
     aria-label="Redes sociales y contacto"
   >
-    <SocialPill href="mailto:miduga@gmail.com">
-      <MailIcon class="size-4" />
-      Contáctame
+    <SocialPill
+      href={`mailto:${links.email}`}
+      aria-label={`Enviar correo a ${links.email}`}
+    >
+      <MailIcon class="size-4 shrink-0" aria-hidden="true" />
+      Escríbeme
     </SocialPill>
-    <SocialPill href="https://linkedin.com/in/midudev">
-      <LinkedInIcon class="size-4" />
-      LinkedIn
-    </SocialPill>
-    <SocialPill href="https://github.com/midudev">
-      <GitHubIcon class="size-4" />
+    <SocialPill href={links.github}>
+      <GitHubIcon class="size-4 shrink-0" aria-hidden="true" />
       GitHub
     </SocialPill>
+    <SocialPill href={links.linkedin}>
+      <LinkedInIcon class="size-4 shrink-0" aria-hidden="true" />
+      LinkedIn
+    </SocialPill>
+
+    {
+      links.cv && (
+        <SocialPill href={links.cv}>
+          <span class="text-sm font-medium">Descargar CV</span>
+        </SocialPill>
+      )
+    }
   </nav>
 </div>

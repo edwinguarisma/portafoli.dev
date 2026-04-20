@@ -1,11 +1,17 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro"
+import { site } from "@/content/site"
 
 const navItems = [
   {
     title: "Experiencia",
     label: "experiencia",
     url: "/#experiencia",
+  },
+  {
+    title: "Stack",
+    label: "stack",
+    url: "/#stack",
   },
   {
     title: "Proyectos",
@@ -20,21 +26,22 @@ const navItems = [
   {
     title: "Contacto",
     label: "contacto",
-    url: "mailto:miduga@gmail.com",
+    url: "/#contacto",
   },
 ]
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-4"
+  class="fixed left-0 right-0 top-0 z-10 mt-3 flex w-full justify-center px-2 sm:mt-4 sm:px-3"
 >
   <nav
-    class="header-nav flex gap-x-1 px-4 py-1.5 text-sm font-medium rounded-full text-gray-600 dark:text-gray-300 justify-center items-center border border-transparent"
+    class="header-nav flex max-w-full flex-nowrap items-center gap-x-0.5 overflow-x-auto overflow-y-hidden overscroll-x-contain rounded-full border border-transparent py-2 pl-2 pr-1 text-xs font-medium text-gray-600 [scrollbar-width:none] dark:text-gray-300 sm:max-w-[42rem] sm:gap-x-1 sm:px-3 sm:text-sm md:flex-wrap md:justify-center md:overflow-visible md:py-1.5 md:pr-2 [&::-webkit-scrollbar]:hidden"
+    aria-label="Secciones del portafolio"
   >
     {
       navItems.map((link) => (
         <a
-          class="nav-link relative block px-3 py-1.5 rounded-full transition-colors duration-200 hover:text-yellow-500 dark:hover:text-yellow-400"
+          class="nav-link relative flex shrink-0 min-h-10 min-w-[2.75rem] items-center justify-center rounded-full px-2.5 py-2 transition-colors duration-200 hover:text-yellow-500 sm:min-h-11 sm:px-3 dark:hover:text-yellow-400"
           aria-label={link.label}
           href={link.url}
         >
@@ -42,7 +49,7 @@ const navItems = [
         </a>
       ))
     }
-    <div class="ml-2 pl-2 border-l border-gray-300/30 dark:border-white/10">
+    <div class="ml-0.5 flex shrink-0 items-center border-l border-gray-300/30 pl-2 dark:border-white/10">
       <ThemeToggle />
     </div>
   </nav>
@@ -53,15 +60,23 @@ const navItems = [
     const sections = document.querySelectorAll("section")
     const navItems = document.querySelectorAll("header nav a")
 
-    const callback = (entries: any[]) => {
+    const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500", "dark:text-yellow-400", "bg-yellow-400/10")
+              item.classList.add(
+                "text-yellow-500",
+                "dark:text-yellow-400",
+                "bg-yellow-400/10",
+              )
               item.classList.remove("text-gray-600", "dark:text-gray-300")
             } else {
-              item.classList.remove("text-yellow-500", "dark:text-yellow-400", "bg-yellow-400/10")
+              item.classList.remove(
+                "text-yellow-500",
+                "dark:text-yellow-400",
+                "bg-yellow-400/10",
+              )
               item.classList.add("text-gray-600", "dark:text-gray-300")
             }
           })
@@ -72,7 +87,7 @@ const navItems = [
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.3,
+      threshold: 0.35,
     })
 
     sections.forEach((section) => {
@@ -99,19 +114,50 @@ const navItems = [
   }
 
   .header-nav {
-    @apply dark:bg-gray-900/80 bg-white/60;
+    background-color: rgb(255 255 255 / 0.6);
+  }
+
+  :global(.dark) .header-nav {
+    background-color: rgb(17 24 39 / 0.8);
   }
 
   .nav-link.text-yellow-500 {
-    @apply font-semibold;
+    font-weight: 600;
   }
 
   @keyframes nav-appear {
     0% {
-      @apply dark:bg-gray-900/0 bg-white/0 border-transparent shadow-none;
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
     }
     to {
-      @apply shadow-lg ring-1 backdrop-blur-md ring-white/10 dark:ring-white/5 border-gray-200/20 dark:border-white/5;
+      box-shadow:
+        0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1),
+        0 0 0 1px rgb(255 255 255 / 0.1);
+      backdrop-filter: blur(12px);
+      border-color: rgb(229 231 235 / 0.2);
+    }
+  }
+
+  :global(.dark) .header-nav {
+    animation-name: nav-appear-dark;
+  }
+
+  @keyframes nav-appear-dark {
+    0% {
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
+    }
+    to {
+      box-shadow:
+        0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1),
+        0 0 0 1px rgb(255 255 255 / 0.05);
+      backdrop-filter: blur(12px);
+      border-color: rgb(255 255 255 / 0.05);
     }
   }
 </style>

@@ -1,22 +1,15 @@
 [
   {
-    "date": "Septiembre 2022 - Actualidad",
-    "title": "Creador de Contenido",
-    "company": "Twitch",
-    "description": "Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.",
-    "link": "https://twitch.tv/midudev",
+    "date": "Enero 2024 - Actualidad",
+    "title": "Desarrollador Full Stack Freelance",
+    "company": "Proyectos propios y clientes por recomendación",
+    "description": "Diseño y construyo plataformas de extremo a extremo para negocios reales: e-commerce con pasarelas de pago nacionales, APIs REST, apps móviles para vendedores y clientes, dashboards administrativos y agentes de sincronización entre sistemas locales y la nube. Stack habitual: Next.js, React, React Native (Expo), TypeScript, Node.js, PostgreSQL con Sequelize, Tailwind CSS y Docker. Trabajo pegado al cliente para priorizar lo que mueve el negocio.",
     "current": true
   },
   {
-    "date": "Junio 2016 - Septiembre 2022",
-    "title": "Lead Frontend Architect",
-    "company": "Adevinta Spain",
-    "description": "Parte del equipo Enablers Frontend en Adevinta Spain. Nuestra misión era conseguir que todos los verticales (Fotocasa, MilAnuncios, Habitaclia, Coches.net, Infojobs) convergieran tecnológicamente, con una arquitectura moderna, flexible y optimizada, fomentando buenas prácticas y dando talleres para compartir conocimiento."
-  },
-  {
-    "date": "Marzo 2011 - Mayo 2016",
-    "title": "Senior Full-Stack Developer",
-    "company": "Hubii",
-    "description": "Start-up sobre localización de noticias y servicios de información. Desarrollé el website con Jade, BEM, Stylus y CoffeeScript; app de Firefox OS offline-first a 60fps; app de Smart TV con accesibilidad por mando a distancia y push notifications; y una API de Insights con NodeJS, Swagger y MongoDB para parsear contenido web con Big Data."
+    "date": "Mayo 2022 - Diciembre 2023",
+    "title": "Desarrollador Web Freelance",
+    "company": "Clientes de servicios, medios y educación",
+    "description": "Sitios web corporativos, catálogos digitales, formularios de afiliación e integraciones de mensajería masiva por SMS. Enfoque en entregar rápido sin sacrificar mantenibilidad: SEO base, rendimiento en móvil y accesibilidad. Stack: Next.js, Astro, React, Tailwind CSS y Node.js."
   }
 ]

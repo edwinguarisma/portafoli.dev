@@ -1,17 +1,44 @@
 [
   {
-    "title": "SVGL - A beautiful library with SVG logos",
-    "description": "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    "link": "https://svgl.vercel.app/",
-    "github": "https://github.com/pheralb/svgl",
-    "image": "/projects/svgl.webp",
-    "tags": ["NEXT", "TAILWIND"]
+    "title": "Hipermercado Salto Ángel",
+    "description": "Plataforma integral para un hipermercado: sitio corporativo, e-commerce con pasarelas de pago nacionales, API REST en Node.js + TypeScript con PostgreSQL y Sequelize, apps móviles para vendedores y clientes (Expo + React Native) y un agente sincronizador que mantiene en tiempo real la base local con la nube.",
+    "tags": ["ECOMMERCE", "MOBILE", "NEXT", "EXPO", "NODE", "POSTGRES"],
+    "private": true
   },
   {
-    "title": "AdventJS - Retos de programación con JavaScript y TypeScript",
-    "description": "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    "link": "https://adventjs.dev",
-    "image": "/projects/adventjs.webp",
-    "tags": ["NEXT", "TAILWIND"]
+    "title": "Flink — Sistema para restaurantes",
+    "description": "Suite completa para la operación de un restaurante: app móvil para meseros, dashboard administrativo, sitio web y API REST centralizada. Los pedidos viajan desde la mesa hasta cocina y caja sin fricción.",
+    "tags": ["MOBILE", "DASHBOARD", "NEXT", "EXPO", "NODE", "POSTGRES"],
+    "private": true
+  },
+  {
+    "title": "La Esperanza — Servicios exequiales",
+    "description": "Sitio web con formularios de afiliación online, sistema interno para elaborar presupuestos y dashboard administrativo para la gestión comercial y el seguimiento de clientes.",
+    "tags": ["DASHBOARD", "NEXT", "NODE", "POSTGRES", "TAILWIND"],
+    "private": true
+  },
+  {
+    "title": "TV Zamora",
+    "description": "Sitio web institucional del canal con un servicio integrado de envío masivo de SMS para notificar a la audiencia sobre programación, alertas y campañas.",
+    "tags": ["NEXT", "NODE", "SMS", "TAILWIND"],
+    "private": true
+  },
+  {
+    "title": "Corporación Dispar",
+    "description": "Sitio corporativo con catálogo digital: búsqueda, categorías y fichas de producto optimizadas para compartir por WhatsApp y redes sociales.",
+    "tags": ["CATALOG", "NEXT", "TAILWIND"],
+    "private": true
+  },
+  {
+    "title": "Café Marketing",
+    "description": "Sitio web corporativo enfocado en rendimiento, SEO y un mensaje comercial claro para captar nuevos clientes.",
+    "tags": ["ASTRO", "TAILWIND"],
+    "private": true
+  },
+  {
+    "title": "Plataforma de reclamos universitarios",
+    "description": "Plataforma web para registrar y dar seguimiento a reclamos y solicitudes dentro de la universidad, con roles diferenciados (estudiante, docente, administración) y panel de gestión.",
+    "tags": ["DASHBOARD", "NEXT", "NODE", "POSTGRES", "TAILWIND"],
+    "private": false
   }
 ]

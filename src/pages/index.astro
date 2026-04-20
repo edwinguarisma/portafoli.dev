@@ -3,48 +3,60 @@ import Layout from "@/layouts/Layout.astro"
 
 import AboutMe from "@/components/AboutMe.astro"
 import Briefcase from "@/components/icons/Briefcase.astro"
+import Code from "@/components/icons/Code.astro"
 import CodeDots from "@/components/icons/CodeDots.astro"
+import Contact from "@/components/Contact.astro"
 import Experience from "@/components/Experience.astro"
-import UserHeart from "@/components/icons/UserHeart.astro"
+import Hero from "@/components/Hero.astro"
 import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
-import Hero from "@/components/Hero.astro"
+import Skills from "@/components/Skills.astro"
 import TitleSection from "@/components/TitleSection.astro"
+import UserHeart from "@/components/icons/UserHeart.astro"
+import { site } from "@/content/site"
 ---
 
-<Layout
-  title="Porfolio de midudev - Desarrollador y Programador Web con 15 años de experiencia"
-  description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
->
-  <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
-      <Hero>
-    </Hero>
+<Layout title={site.meta.title} description={site.meta.description}>
+  <main id="contenido-principal" class="min-w-0 max-w-[100vw] overflow-x-hidden px-3 sm:px-4">
+    <SectionContainer class="pb-16 pt-24 sm:pb-20 sm:pt-28 md:py-36">
+      <Hero />
     </SectionContainer>
     <div class="space-y-24">
-    <SectionContainer id="experiencia">
-      <TitleSection>
-        <Briefcase class="size-8" />
-        Experiencia laboral
-      </TitleSection>
-      <Experience />
-    </SectionContainer>
+      <SectionContainer id="stack">
+        <TitleSection>
+          <Code class="size-8 shrink-0" aria-hidden="true" />
+          Stack técnico
+        </TitleSection>
+        <Skills />
+      </SectionContainer>
 
-    <SectionContainer id="proyectos">
-      <TitleSection>
-        <CodeDots class="size-7" />
-        Proyectos
-      </TitleSection>
-      <Projects />
-    </SectionContainer>
+      <SectionContainer id="experiencia">
+        <TitleSection>
+          <Briefcase class="size-8 shrink-0" aria-hidden="true" />
+          Experiencia laboral
+        </TitleSection>
+        <Experience />
+      </SectionContainer>
 
-    <SectionContainer id="sobre-mi">
-      <TitleSection>
-        <UserHeart class="size-8" />
-        Sobre mí
-      </TitleSection>
-      <AboutMe />
-    </SectionContainer>
-  </div>
+      <SectionContainer id="proyectos">
+        <TitleSection>
+          <CodeDots class="size-7 shrink-0" aria-hidden="true" />
+          Proyectos
+        </TitleSection>
+        <Projects />
+      </SectionContainer>
+
+      <SectionContainer id="sobre-mi">
+        <TitleSection>
+          <UserHeart class="size-8 shrink-0" aria-hidden="true" />
+          Sobre mí
+        </TitleSection>
+        <AboutMe />
+      </SectionContainer>
+
+      <SectionContainer id="contacto" class="pb-8">
+        <Contact />
+      </SectionContainer>
+    </div>
   </main>
 </Layout>

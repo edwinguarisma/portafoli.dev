@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-amber: 245 158 11;
+    --brand-orange: 249 115 22;
+    --surface-page: 249 250 251;
+    --surface-elevated: 255 255 255;
+  }
+
+  .dark {
+    --surface-page: 3 7 18;
+    --surface-elevated: 17 24 39;
+  }
+}

@@ -4,7 +4,7 @@ Plantilla de portafolio profesional enfocada en mostrar tu perfil, experiencia y
 
 ## Vista previa
 
-- Sitio base: [https://porfolio.dev/](https://porfolio.dev/)
+- Sitio base: [https://edwinguarisma.com/](https://edwinguarisma.com/)
 - Imagen de referencia:
 
 <div align="center">

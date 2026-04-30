@@ -8,7 +8,7 @@ Plantilla de portafolio profesional enfocada en mostrar tu perfil, experiencia y
 - Imagen de referencia:
 
 <div align="center">
-  <img src="./public/porfolio.webp" alt="Vista previa del portafolio" />
+  <img src="./public/vista_previa_repo.webp" alt="Vista previa del portafolio" />
 </div>
 
 ## Stack

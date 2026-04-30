@@ -3,18 +3,32 @@
     "title": "Hipermercado Salto Ángel",
     "description": "Plataforma integral para un hipermercado: sitio corporativo, e-commerce con pasarelas de pago nacionales, API REST en Node.js + TypeScript con PostgreSQL y Sequelize, apps móviles para vendedores y clientes (Expo + React Native) y un agente sincronizador que mantiene en tiempo real la base local con la nube.",
     "tags": ["ECOMMERCE", "MOBILE", "NEXT", "EXPO", "NODE", "POSTGRES"],
+    "image": "/projects/proyecto-1.jpg",
+    "link": "http://hipermercadosaltoangel.com/",
     "private": true
   },
   {
     "title": "Flink — Sistema para restaurantes",
     "description": "Suite completa para la operación de un restaurante: app móvil para meseros, dashboard administrativo, sitio web y API REST centralizada. Los pedidos viajan desde la mesa hasta cocina y caja sin fricción.",
     "tags": ["MOBILE", "DASHBOARD", "NEXT", "EXPO", "NODE", "POSTGRES"],
+    "image": "/projects/proyecto-2.jpg",
+    "link": "https://flink-web.vercel.app/",
     "private": true
   },
   {
     "title": "La Esperanza — Servicios exequiales",
     "description": "Sitio web con formularios de afiliación online, sistema interno para elaborar presupuestos y dashboard administrativo para la gestión comercial y el seguimiento de clientes.",
     "tags": ["DASHBOARD", "NEXT", "NODE", "POSTGRES", "TAILWIND"],
+    "image": "/projects/proyecto-3.jpg",
+    "link": "https://laesperanzaexequiales.com/",
+    "private": true
+  },
+  {
+    "title": "Plataforma de reclamos universitarios",
+    "description": "Plataforma web para registrar y dar seguimiento a reclamos y solicitudes dentro de la universidad, con roles diferenciados (estudiante, docente, administración) y panel de gestión.",
+    "tags": ["DASHBOARD", "NEXT", "NODE", "POSTGRES", "TAILWIND"],
+    "image": "/projects/proyecto-4.jpg",
+    "link": "https://curious-bienenstitch-aa8442.netlify.app/",
     "private": true
   },
   {
@@ -34,11 +48,5 @@
     "description": "Sitio web corporativo enfocado en rendimiento, SEO y un mensaje comercial claro para captar nuevos clientes.",
     "tags": ["ASTRO", "TAILWIND"],
     "private": true
-  },
-  {
-    "title": "Plataforma de reclamos universitarios",
-    "description": "Plataforma web para registrar y dar seguimiento a reclamos y solicitudes dentro de la universidad, con roles diferenciados (estudiante, docente, administración) y panel de gestión.",
-    "tags": ["DASHBOARD", "NEXT", "NODE", "POSTGRES", "TAILWIND"],
-    "private": false
   }
 ]

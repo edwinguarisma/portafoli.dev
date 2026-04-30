@@ -1,27 +1,90 @@
-# 👨🏻‍💻 Porfolio para programadores y desarrolladores
+# Portafolio para desarrolladores con Astro
+
+Plantilla de portafolio profesional enfocada en mostrar tu perfil, experiencia y proyectos de forma clara y rápida.
+
+## Vista previa
+
+- Sitio base: [https://porfolio.dev/](https://porfolio.dev/)
+- Imagen de referencia:
 
 <div align="center">
-<a href="https://porfolio.dev/">
-<img src="./public/porfolio.webp">
-</a>
-<p></p>
+  <img src="./public/porfolio.webp" alt="Vista previa del portafolio" />
 </div>
 
-<div align="center">
+## Stack
 
-![Astro Badge](https://img.shields.io/badge/Astro-FF3E00?logo=astro&logoColor=fff&style=flat)
-![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat)
-![GitHub stars](https://img.shields.io/github/stars/midudev/porfolio.dev)
-![GitHub PRs](https://img.shields.io/github/issues-pr/midudev/porfolio.dev)
-![GitHub forks](https://img.shields.io/github/forks/midudev/porfolio.dev)
-![GitHub issues](https://img.shields.io/github/issues/midudev/porfolio.dev)
+- [Astro](https://astro.build/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [AOS](https://michalsnik.github.io/aos/) para animaciones
 
-</div>
+## Secciones incluidas
 
-## 🫂 Contribuidores
+- Hero principal
+- Stack técnico
+- Experiencia laboral
+- Proyectos
+- Sobre mí
+- Contacto
 
-<a href="https://github.com/midudev/porfolio.dev/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=midudev/porfolio.dev" />
-</a>
+## Ejecutar en local
 
-<p></p>
+### 1) Instalar dependencias
+
+```bash
+npm install
+```
+
+### 2) Iniciar entorno de desarrollo
+
+```bash
+npm run dev
+```
+
+### 3) Build de producción
+
+```bash
+npm run build
+```
+
+### 4) Previsualizar build
+
+```bash
+npm run preview
+```
+
+## Personalización rápida
+
+Edita estos archivos para adaptar el portafolio a tu perfil:
+
+- `src/content/site.ts`: nombre, headline, enlaces, SEO y stack.
+- `src/data/experience.json`: experiencia laboral.
+- `src/data/projects.json`: proyectos destacados.
+- `public/img/`: fotos de perfil e imágenes.
+
+## Estructura del proyecto
+
+```text
+src/
+  components/      # Componentes reutilizables
+  content/         # Configuración global del sitio
+  data/            # Datos de experiencia y proyectos
+  layouts/         # Layout base
+  pages/           # Páginas Astro
+  styles/          # Estilos globales
+public/            # Assets estáticos
+```
+
+## Scripts disponibles
+
+- `npm run dev`: desarrollo.
+- `npm run build`: validación + build.
+- `npm run preview`: servidor de preview.
+
+## Créditos
+
+Proyecto original inspirado en [midudev/porfolio.dev](https://github.com/midudev/porfolio.dev).
+
+## Licencia
+
+Este repositorio incluye un archivo `LICENSE.md`. Revisa sus términos antes de redistribuir o usar comercialmente.

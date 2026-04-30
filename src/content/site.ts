@@ -25,7 +25,7 @@ export const site = {
     aboutImageAlt: "Retrato en sección Sobre mí",
   },
   links: {
-    email: "proyectoedwinjose@gmail.com",
+    email: "https://wa.me/+584122072810",
     linkedin: "https://www.linkedin.com/in/tu-perfil",
     github: "https://github.com/edwinguarisma",
     /** Si subes un PDF a `public/`, pon la ruta, ej: "/cv.pdf" */
@@ -35,7 +35,7 @@ export const site = {
     show: true,
     label: "Disponible para nuevas oportunidades",
     /** Destino al pulsar el badge (correo o LinkedIn) */
-    badgeHref: "mailto:proyectoedwinjose@gmail.com",
+    badgeHref: "https://wa.me/+584122072810",
   },
   /** Texto largo de “Sobre mí”: 2–3 párrafos con hechos medibles */
   about: {

@@ -2,7 +2,6 @@
 import { site } from "@/content/site";
 import Badge from "@/components/Badge.astro";
 import GitHubIcon from "@/components/icons/GitHub.astro";
-import LinkedInIcon from "@/components/icons/LinkedIn.astro";
 import MailIcon from "@/components/icons/Mail.astro";
 import SparklesIcon from "@/components/icons/Sparkles.astro";
 import SocialPill from "@/components/SocialPill.astro";
@@ -78,7 +77,7 @@ const { person, links, availability } = site;
     aria-label="Redes sociales y contacto"
   >
     <SocialPill
-      href={`mailto:${links.email}`}
+      href={`${links.email}`}
       aria-label={`Enviar correo a ${links.email}`}
     >
       <MailIcon class="size-4 shrink-0" aria-hidden="true" />
@@ -88,10 +87,10 @@ const { person, links, availability } = site;
       <GitHubIcon class="size-4 shrink-0" aria-hidden="true" />
       GitHub
     </SocialPill>
-    <SocialPill href={links.linkedin}>
+    <!-- <SocialPill href={links.linkedin}>
       <LinkedInIcon class="size-4 shrink-0" aria-hidden="true" />
       LinkedIn
-    </SocialPill>
+    </SocialPill> -->
 
     {
       links.cv && (
